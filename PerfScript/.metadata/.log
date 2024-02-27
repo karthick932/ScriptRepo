@@ -1,0 +1,374 @@
+!SESSION 2024-02-27 10:34:57.766 -----------------------------------------------
+eclipse.buildId=unknown
+java.fullversion=1.8.0_382-b05
+JRE 1.8.0 Windows 8 amd64-64-Bit Compressed References 20230810_742 (JIT enabled, AOT enabled)
+OpenJ9   - d12d10c9e
+OMR      - e80bff83b
+JCL      - c4d2c2bafb based on jdk8u382-b05
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product com.ibm.rational.rpt.product.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ibm.rational.rpt.product.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-02-27 10:35:24.644
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\karthick_ba'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.ibm.rational.test.rtw.webgui.recorder 4 0 2024-02-27 10:36:54.774
+!MESSAGE CRRTWW0022E Exception in starting Chrome browser.
+org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading 'style')
+  (Session info: chrome=121.0.6167.185)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'LP1-AP-51685672', ip: '192.168.1.34', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_382'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1adf43d1af868233a19b56c84f134f87, executeScript {script=const loadTimer = 1000;/******************************************************************
+* Licensed Materials - Property of IBM and/or HCL 
+* (c) Copyright HCL Technologies Ltd. 2019. All Rights Reserved.
+* 
+* Note to U.S. Government Users Restricted Rights: 
+* Use, duplication or disclosure restricted by GSA ADP Schedule 
+* Contract with IBM Corp. 
+*******************************************************************/
+
+function setTableDisplay(display) {
+	var table = document.getElementById('appTable');
+	table.style.display = display;
+}
+setTableDisplay('none');
+
+function addStyle(str) {
+	var node = document.createElement('style');
+	node.innerHTML = str;
+	document.body.appendChild(node);
+}
+addStyle('\
+	#loader {\
+		border: 3px solid #f3f3f3;\
+		animation: spin 1s linear infinite;\
+		border-top: 3px solid #555;\
+		border-radius: 50%;\
+		width: 30px;\
+		height: 30px;\
+	}\
+	@keyframes spin {\
+		0% { transform: rotate(0deg); }\
+		100% { transform: rotate(360deg); }\
+	}'
+);
+
+function createLoader() {
+	var loader = document.createElement('div');
+	loader.id = 'loader';
+	var cfgApp = document.getElementById('configApp');
+	cfgApp.appendChild(loader);
+}
+createLoader();
+
+function hideLoader() {
+	var loader = document.getElementById('loader');
+	loader.style.display = 'none';
+}
+
+setTimeout(function() {
+		hideLoader();
+		setTableDisplay('inherit');
+	}, loadTimer
+);
+, args=[]}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.47 (aa23feff6d08..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(manual, http=localhos..., se:cdp: ws://localhost:60876/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1adf43d1af868233a19b56c84f134f87
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:501)
+	at com.ibm.rational.test.rtw.webgui.client.SelClientDelegate.populateAppList(SelClientDelegate.java:413)
+	at com.ibm.rational.test.rtw.webgui.client.SelChromeClientDelegate.star
+!STACK 0
+java.lang.Throwable: org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading 'style')
+  (Session info: chrome=121.0.6167.185)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'LP1-AP-51685672', ip: '192.168.1.34', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_382'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1adf43d1af868233a19b56c84f134f87, executeScript {script=const loadTimer = 1000;/******************************************************************
+* Licensed Materials - Property of IBM and/or HCL 
+* (c) Copyright HCL Technologies Ltd. 2019. All Rights Reserved.
+* 
+* Note to U.S. Government Users Restricted Rights: 
+* Use, duplication or disclosure restricted by GSA ADP Schedule 
+* Contract with IBM Corp. 
+*******************************************************************/
+
+function setTableDisplay(display) {
+	var table = document.getElementById('appTable');
+	table.style.display = display;
+}
+setTableDisplay('none');
+
+function addStyle(str) {
+	var node = document.createElement('style');
+	node.innerHTML = str;
+	document.body.appendChild(node);
+}
+addStyle('\
+	#loader {\
+		border: 3px solid #f3f3f3;\
+		animation: spin 1s linear infinite;\
+		border-top: 3px solid #555;\
+		border-radius: 50%;\
+		width: 30px;\
+		height: 30px;\
+	}\
+	@keyframes spin {\
+		0% { transform: rotate(0deg); }\
+		100% { transform: rotate(360deg); }\
+	}'
+);
+
+function createLoader() {
+	var loader = document.createElement('div');
+	loader.id = 'loader';
+	var cfgApp = document.getElementById('configApp');
+	cfgApp.appendChild(loader);
+}
+createLoader();
+
+function hideLoader() {
+	var loader = document.getElementById('loader');
+	loader.style.display = 'none';
+}
+
+setTimeout(function() {
+		hideLoader();
+		setTableDisplay('inherit');
+	}, loadTimer
+);
+, args=[]}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.47 (aa23feff6d08..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(manual, http=localhos..., se:cdp: ws://localhost:60876/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1adf43d1af868233a19b56c84f134f87
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:501)
+	at com.ibm.rational.test.rtw.webgui.client.SelClientDelegate.populateAppList(SelClientDelegate.java:413)
+	at com.ibm.rational.test.rtw.webgui.client.SelChromeClientDelegate.startSelClient(SelChromeClientDelegate.java:149)
+	at com.ibm.rational.test.rtw.webgui.client.SelClientDelegate.start(SelClientDelegate.java:91)
+	at com.ibm.rational.test.lt.recorder.core.internal.session.Client.startDelegate(Client.java:103)
+	at com.ibm.rational.test.lt.recorder.core.internal.session.Client.startDecoration(Client.java:278)
+	at com.ibm.rational.test.lt.recorder.core.internal.session.Client.access$13(Client.java:275)
+	at com.ibm.rational.test.lt.recorder.core.internal.session.Client$8.run(Client.java:291)
+	at com.ibm.rational.test.lt.recorder.core.internal.session.ProcessingQueue.run(ProcessingQueue.java:38)
+
+!ENTRY com.ibm.rational.test.lt.testgen.core3 1 0 2024-02-27 10:37:47.069
+!MESSAGE RPTTI0001 Test generation started at Tue Feb 27 10:37:47 IST 2024 -- input:  PerfTestScript.recsession
+
+!ENTRY com.ibm.rational.test.lt.testgen.core3 1 0 2024-02-27 10:38:01.416
+!MESSAGE RPTTI0002 Test generation completed at Tue Feb 27 10:38:01 IST 2024 -- output:  PerfTestScript.testsuite
+
+!ENTRY com.ibm.rational.test.lt.codegen.core 4 0 2024-02-27 10:38:45.452
+!MESSAGE RPTA5041E Fatal error translating the element for type 'com.ibm.rational.test.lt.models.behavior.http.HTTPRequest'.
+com.ibm.rational.test.lt.codegen.core.lang.FatalTranslationException: com.ibm.rational.test.lt.codegen.core.config.ConfigurationException: java.util.zip.ZipException: duplicate entry: A1EED52E28640700FB4EB76363336364
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:139)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.translate(CodeGenerator.java:363)
+	at com.ibm.rational.test.lt.codegen.core.lang.AbstractTranslator.translateChildren(AbstractTranslator.java:314)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.translatePage(HTTPTranslator.java:479)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:123)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.translate(CodeGenerator.java:363)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.doGenerateCode(CodeGenerator.java:204)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.generateCode(CodeGenerator.java:70)
+	at com.ibm.rational.test.lt.codegen.core.CodegenService.genCode(CodegenService.java:403)
+	at com.ibm.rational.test.lt.codegen.core.CodegenService.generateCode(CodegenService.java:183)
+	at com.ibm.rational.test.lt.execution.ui.controllers.CodeGenerationController.generateCode(CodeGenerationController.java:145)
+	at com.ibm.rational.test.lt.execution.ui.controllers.CodeGenerationController.generateCode(CodeGenerationController.java:129)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.generateCode(RptLaunchJob.java:957)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.doRun(RptLaunchJob.java:592)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:513)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: com.ibm.rational.test.lt.codegen.core.config.ConfigurationException: java.util.zip.ZipException: duplicate entry: A1EED52E28640700FB4EB76363336364
+	at com.ibm.rational.test.lt.codegen.core.storage.eclipse.ProjectConfiguration.addDataEntryToZip(ProjectConfiguration.java:1474)
+	at com.ibm.rational.test.lt.codegen.core.storage.eclipse.ProjectConfiguration.createFileDataEntry(ProjectConfiguration.java:1493)
+	at com.ibm.rational.test.lt.codegen.core.lang.pleiades.AbstractPleiadesStructureDefinition.createFileDataEntry(AbstractPleiadesStructureDefinition.java:479)
+	at com.ibm.rational.test.lt.codegen.lttest.lang.LTTestTranslator.createFileDataChunkUploadLangElement(LTTestTranslator.java:3339)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getPostDataChunk(HTTPTranslator.java:2104)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getRequestDataCreateElement(HTTPTranslator.java:2245)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.translateRequest(HTTPTranslator.java:937)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:127)
+	... 15 more
+
+!STACK 0
+java.lang.Throwable: com.ibm.rational.test.lt.codegen.core.lang.FatalTranslationException: com.ibm.rational.test.lt.codegen.core.config.ConfigurationException: java.util.zip.ZipException: duplicate entry: A1EED52E28640700FB4EB76363336364
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:139)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.translate(CodeGenerator.java:363)
+	at com.ibm.rational.test.lt.codegen.core.lang.AbstractTranslator.translateChildren(AbstractTranslator.java:314)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.translatePage(HTTPTranslator.java:479)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:123)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.translate(CodeGenerator.java:363)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.doGenerateCode(CodeGenerator.java:204)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.generateCode(CodeGenerator.java:70)
+	at com.ibm.rational.test.lt.codegen.core.CodegenService.genCode(CodegenService.java:403)
+	at com.ibm.rational.test.lt.codegen.core.CodegenService.generateCode(CodegenService.java:183)
+	at com.ibm.rational.test.lt.execution.ui.controllers.CodeGenerationController.generateCode(CodeGenerationController.java:145)
+	at com.ibm.rational.test.lt.execution.ui.controllers.CodeGenerationController.generateCode(CodeGenerationController.java:129)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.generateCode(RptLaunchJob.java:957)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.doRun(RptLaunchJob.java:592)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:513)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: java.lang.Throwable: com.ibm.rational.test.lt.codegen.core.config.ConfigurationException: java.util.zip.ZipException: duplicate entry: A1EED52E28640700FB4EB76363336364
+	at com.ibm.rational.test.lt.codegen.core.storage.eclipse.ProjectConfiguration.addDataEntryToZip(ProjectConfiguration.java:1474)
+	at com.ibm.rational.test.lt.codegen.core.storage.eclipse.ProjectConfiguration.createFileDataEntry(ProjectConfiguration.java:1493)
+	at com.ibm.rational.test.lt.codegen.core.lang.pleiades.AbstractPleiadesStructureDefinition.createFileDataEntry(AbstractPleiadesStructureDefinition.java:479)
+	at com.ibm.rational.test.lt.codegen.lttest.lang.LTTestTranslator.createFileDataChunkUploadLangElement(LTTestTranslator.java:3339)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getPostDataChunk(HTTPTranslator.java:2104)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getRequestDataCreateElement(HTTPTranslator.java:2245)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.translateRequest(HTTPTranslator.java:937)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:127)
+	... 15 more
+
+!ENTRY com.ibm.rational.test.lt.codegen.core 4 0 2024-02-27 10:38:45.471
+!MESSAGE RPTA5041E Fatal error translating the element for type 'com.ibm.rational.test.lt.models.behavior.http.HTTPPage'.
+com.ibm.rational.test.lt.codegen.core.lang.FatalTranslationException: com.ibm.rational.test.lt.codegen.core.lang.FatalTranslationException: com.ibm.rational.test.lt.codegen.core.config.ConfigurationException: java.util.zip.ZipException: duplicate entry: A1EED52E28640700FB4EB76363336364
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:139)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.translate(CodeGenerator.java:363)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.doGenerateCode(CodeGenerator.java:204)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.generateCode(CodeGenerator.java:70)
+	at com.ibm.rational.test.lt.codegen.core.CodegenService.genCode(CodegenService.java:403)
+	at com.ibm.rational.test.lt.codegen.core.CodegenService.generateCode(CodegenService.java:183)
+	at com.ibm.rational.test.lt.execution.ui.controllers.CodeGenerationController.generateCode(CodeGenerationController.java:145)
+	at com.ibm.rational.test.lt.execution.ui.controllers.CodeGenerationController.generateCode(CodeGenerationController.java:129)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.generateCode(RptLaunchJob.java:957)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.doRun(RptLaunchJob.java:592)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:513)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: com.ibm.rational.test.lt.codegen.core.lang.FatalTranslationException: com.ibm.rational.test.lt.codegen.core.config.ConfigurationException: java.util.zip.ZipException: duplicate entry: A1EED52E28640700FB4EB76363336364
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:139)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.translate(CodeGenerator.java:363)
+	at com.ibm.rational.test.lt.codegen.core.lang.AbstractTranslator.translateChildren(AbstractTranslator.java:314)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.translatePage(HTTPTranslator.java:479)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:123)
+	... 11 more
+Caused by: com.ibm.rational.test.lt.codegen.core.config.ConfigurationException: java.util.zip.ZipException: duplicate entry: A1EED52E28640700FB4EB76363336364
+	at com.ibm.rational.test.lt.codegen.core.storage.eclipse.ProjectConfiguration.addDataEntryToZip(ProjectConfiguration.java:1474)
+	at com.ibm.rational.test.lt.codegen.core.storage.eclipse.ProjectConfiguration.createFileDataEntry(ProjectConfiguration.java:1493)
+	at com.ibm.rational.test.lt.codegen.core.lang.pleiades.AbstractPleiadesStructureDefinition.createFileDataEntry(AbstractPleiadesStructureDefinition.java:479)
+	at com.ibm.rational.test.lt.codegen.lttest.lang.LTTestTranslator.createFileDataChunkUploadLangElement(LTTestTranslator.java:3339)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getPostDataChunk(HTTPTranslator.java:2104)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getRequestDataCreateElement(HTTPTranslator.java:2245)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.translateRequest(HTTPTranslator.java:937)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:127)
+	... 15 more
+
+!STACK 0
+java.lang.Throwable: com.ibm.rational.test.lt.codegen.core.lang.FatalTranslationException: com.ibm.rational.test.lt.codegen.core.lang.FatalTranslationException: com.ibm.rational.test.lt.codegen.core.config.ConfigurationException: java.util.zip.ZipException: duplicate entry: A1EED52E28640700FB4EB76363336364
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:139)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.translate(CodeGenerator.java:363)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.doGenerateCode(CodeGenerator.java:204)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.generateCode(CodeGenerator.java:70)
+	at com.ibm.rational.test.lt.codegen.core.CodegenService.genCode(CodegenService.java:403)
+	at com.ibm.rational.test.lt.codegen.core.CodegenService.generateCode(CodegenService.java:183)
+	at com.ibm.rational.test.lt.execution.ui.controllers.CodeGenerationController.generateCode(CodeGenerationController.java:145)
+	at com.ibm.rational.test.lt.execution.ui.controllers.CodeGenerationController.generateCode(CodeGenerationController.java:129)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.generateCode(RptLaunchJob.java:957)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.doRun(RptLaunchJob.java:592)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:513)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: java.lang.Throwable: com.ibm.rational.test.lt.codegen.core.lang.FatalTranslationException: com.ibm.rational.test.lt.codegen.core.config.ConfigurationException: java.util.zip.ZipException: duplicate entry: A1EED52E28640700FB4EB76363336364
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:139)
+	at com.ibm.rational.test.lt.codegen.core.CodeGenerator.translate(CodeGenerator.java:363)
+	at com.ibm.rational.test.lt.codegen.core.lang.AbstractTranslator.translateChildren(AbstractTranslator.java:314)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.translatePage(HTTPTranslator.java:479)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:123)
+	... 11 more
+Caused by: java.lang.Throwable: com.ibm.rational.test.lt.codegen.core.config.ConfigurationException: java.util.zip.ZipException: duplicate entry: A1EED52E28640700FB4EB76363336364
+	at com.ibm.rational.test.lt.codegen.core.storage.eclipse.ProjectConfiguration.addDataEntryToZip(ProjectConfiguration.java:1474)
+	at com.ibm.rational.test.lt.codegen.core.storage.eclipse.ProjectConfiguration.createFileDataEntry(ProjectConfiguration.java:1493)
+	at com.ibm.rational.test.lt.codegen.core.lang.pleiades.AbstractPleiadesStructureDefinition.createFileDataEntry(AbstractPleiadesStructureDefinition.java:479)
+	at com.ibm.rational.test.lt.codegen.lttest.lang.LTTestTranslator.createFileDataChunkUploadLangElement(LTTestTranslator.java:3339)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getPostDataChunk(HTTPTranslator.java:2104)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getRequestDataCreateElement(HTTPTranslator.java:2245)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.translateRequest(HTTPTranslator.java:937)
+	at com.ibm.rational.test.lt.codegen.http.lang.HTTPTranslator.getTranslationFor(HTTPTranslator.java:127)
+	... 15 more
+
+!ENTRY com.ibm.rational.test.lt.execution.ui 4 0 2024-02-27 10:38:45.509
+!MESSAGE RPTI0008E Code generation failure: 
+RPTA4040I
+Fatal error translating the element for type 'com.ibm.rational.test.lt.models.behavior.http.HTTPPage'.
+com.ibm.rational.test.lt.codegen.core.lang.FatalTranslationException: com.ibm.rational.test.lt.codegen.core.config.ConfigurationException: java.util.zip.ZipException: duplicate entry: A1EED52E28640700FB4EB76363336364.  For more information, see the Troubleshooting section of the online help.
+
+!ENTRY com.ibm.rational.test.lt.execution.ui 4 0 2024-02-27 10:38:53.649
+!MESSAGE RPTI0009W Test run aborted due to error.
+java.lang.NullPointerException
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.startExecutionController(RptLaunchJob.java:994)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:737)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.doRun(RptLaunchJob.java:633)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:513)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+
+!STACK 0
+java.lang.NullPointerException
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.startExecutionController(RptLaunchJob.java:994)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:737)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.doRun(RptLaunchJob.java:633)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:513)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+
+!ENTRY com.ibm.rational.test.lt.execution.extension 2 0 2024-02-27 10:39:23.467
+!MESSAGE RPTR0000W ALOHA STOP for null
+
+!ENTRY com.ibm.rational.test.lt.execution.extension 2 0 2024-02-27 10:39:23.481
+!MESSAGE RPTR0000W XMLAlohaTypedEventLoader setStatus HISTORY_COMPLETE for null
+
+!ENTRY com.ibm.rational.test.lt.execution 1 0 2024-02-27 10:39:23.972
+!MESSAGE RPTJ1000E Cleaning working directory C:\Users\karthick_ba\AppData\Local\Temp\rpt.PerfTestScript.1711934683867043892
+
+!ENTRY com.ibm.rational.test.lt.execution.ui 4 0 2024-02-27 10:39:49.555
+!MESSAGE RPTI0009W Test run aborted due to error.
+java.lang.NullPointerException
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.startExecutionController(RptLaunchJob.java:994)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:737)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.doRun(RptLaunchJob.java:633)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:513)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+
+!STACK 0
+java.lang.NullPointerException
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.startExecutionController(RptLaunchJob.java:994)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:737)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.doRun(RptLaunchJob.java:633)
+	at com.ibm.rational.test.lt.execution.ui.test.rpt.launch.RptLaunchJob.run(RptLaunchJob.java:513)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+
+!ENTRY com.ibm.rational.test.lt.execution.extension 2 0 2024-02-27 10:40:21.122
+!MESSAGE RPTR0000W ALOHA STOP for null
+
+!ENTRY com.ibm.rational.test.lt.execution.extension 2 0 2024-02-27 10:40:21.133
+!MESSAGE RPTR0000W XMLAlohaTypedEventLoader setStatus HISTORY_COMPLETE for null
+
+!ENTRY com.ibm.rational.test.lt.execution 1 0 2024-02-27 10:40:22.165
+!MESSAGE RPTJ1000E Cleaning working directory C:\Users\karthick_ba\AppData\Local\Temp\rpt.PerfTestScript.1334608339440184278
+
+!ENTRY com.ibm.rational.test.lt.execution.extension 2 0 2024-02-27 10:41:21.818
+!MESSAGE RPTR0000W ALOHA STOP for null
+
+!ENTRY com.ibm.rational.test.lt.execution.extension 2 0 2024-02-27 10:41:21.831
+!MESSAGE RPTR0000W XMLAlohaTypedEventLoader setStatus HISTORY_COMPLETE for null
+
+!ENTRY com.ibm.rational.test.lt.execution 1 0 2024-02-27 10:41:22.350
+!MESSAGE RPTJ1000E Cleaning working directory C:\Users\karthick_ba\AppData\Local\Temp\rpt.PerfTestScript.3387875476927602910
